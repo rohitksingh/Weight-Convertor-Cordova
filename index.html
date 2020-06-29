@@ -31,7 +31,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6 offset-md-3">
-                <h1 class="display-4 text-center">Weight Convertor App</h1>
+                <h1 class="display-4 text-center">Weight Convertor</h1>
                 <form>
                     <div class="form-group">
                         <input id="lbsInput" type="number" class="form-control form-control-lg" placeholder="Enter lbs">
@@ -68,14 +68,11 @@
              let lbs = e.target.value;
              if(output.style.visibility=='hidden'){
                  output.style.visibility = 'visible';
-                 console.log("Hiiden");
              }
              document.getElementById('kgID').innerHTML = lbs*0.453592;
              document.getElementById('gramID').innerHTML = lbs*453.5920000001679;
              document.getElementById('ouncesID').innerHTML = lbs*15.999986948640000151;
- 
          });
      </script>
-    <script src="cordova.js"></script>
 </body>
 </html>

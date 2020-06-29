@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget 
+    id          = "com.rohksin.weightconvertor"  
+    version     = "1.1.0" 
+    xmlns       = "http://www.w3.org/ns/widgets" 
+    xmlns:gap   = "http://phonegap.com/ns/1.0">
+    <name>Weight Convertor</name>
+
+    <description>
+        Cordova app with bootstrap
+    </description>
+
+    <author email="r4rohit002@gmail.com" href="https://github.com/rohitksingh">
+        Jesus Tapia-Martinez
+    </author>
+
+    <content src="index.html" />
+
+    <preference name="phonegap-version"         value="cli-9.0.0"   />
+    <plugin name="cordova-plugin-statusbar"                     spec="2.3.0" />
+    <plugin name="cordova-plugin-whitelist"                     spec="1.2.2" />
+
+    <preference name = "Orientation"           value = "default"   />
+    <preference name = "DisallowOverscroll"    value = "false"     />
+    <preference name = "android-minSdkVersion" value = "19"        />
+    
+    <preference name="StatusBarOverlaysWebView" value="false"           />
+    <preference name="StatusBarBackgroundColor" value="#8C1D40"         />
+    <preference name="StatusBarStyle"           value="lightcontent"    />
+
+    <access             origin="*"  />
+    <allow-navigation   href="*"    />
+
+    <allow-intent href="http://*/*"      />   
+    <allow-intent href="https://*/*"     />   
+    <allow-intent href="tel:*"           />   
+    <allow-intent href="sms:*"           />   
+    <allow-intent href="mailto:*"        />   
+    <allow-intent href="geo:*"           />   
+  
+    <platform name="android">  
+        <allow-intent href="market:*"    />  
+    </platform>  
+      
+</widget>
