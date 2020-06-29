@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Cordova</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<!-- This is not a secure content policy, should be locked down for prod -->
+	<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' 
+                    https://ssl.gstatic.com 
+                    https://*.phonegap.com; 
+				style-src 'self' 'unsafe-inline'; 
+				script-src  'self' 'unsafe-inline' 'unsafe-eval' 
+                    http://mysqljs.com
+                    https://cdnjs.cloudflare.com
+					https://*.phonegap.com ;
+                media-src *" />	
+    <style>
+        body{ 
+            margin-top: 70px; 
+            background-color: #333; 
+            color: white;
+            }        
+        .output{
+            visibility: hidden;
+            }
+    </style>         
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h1 class="display-4 text-center">Weight Convertor App</h1>
+                <form>
+                    <div class="form-group">
+                        <input id="lbsInput" type="number" class="form-control form-control-lg" placeholder="Enter lbs">
+                    </div>
+                </form>
+                <div class="output" id="output">
+                    <div class="card bg-success mb-2">
+                        <div class="card-body">
+                            <h4>Kilograms</h4>  
+                            <div id="kgID">0</div>
+                        </div>
+                    </div>
+                    <div class="card bg-primary mb-2">
+                        <div class="card-body">
+                            <h4>Grams</h4>  
+                            <div id="gramID">0</div>
+                        </div>
+                    </div>
+                    <div class="card bg-warning mb-2">
+                        <div class="card-body">
+                            <h4>Ounces</h4>  
+                            <div id="ouncesID">0</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </div>
+    <script>
+        var output = document.getElementById('output');
+        output.style.visibility = 'hidden'
+ 
+         document.getElementById('lbsInput').addEventListener('input', function(e){
+             let lbs = e.target.value;
+             if(output.style.visibility=='hidden'){
+                 output.style.visibility = 'visible';
+                 console.log("Hiiden");
+             }
+             document.getElementById('kgID').innerHTML = lbs*0.453592;
+             document.getElementById('gramID').innerHTML = lbs*453.5920000001679;
+             document.getElementById('ouncesID').innerHTML = lbs*15.999986948640000151;
+ 
+         });
+     </script>
+    <script src="cordova.js"></script>
+</body>
+</html>
